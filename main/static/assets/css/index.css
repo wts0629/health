@@ -1,0 +1,127 @@
+
+body {
+    padding-top: 50px; 
+    background-color: #339AFF;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+/* 导航条 */
+.container-fluid{
+    height: 50px;
+}
+.navbar-brand{
+    padding: 0;
+    width: 200px;
+
+}
+.navbar-brand img{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navbar-right{
+    height: 50px;
+}
+.navbar-nav>li{
+    height: 50px;
+}
+.navbar-right img{
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-inverse{
+    height: 50px;
+    background-color:#339AFF;
+    border-color:#fd9001
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+    background-color:#d67b03;
+}
+.navbar-inverse .navbar-brand{
+    color: aliceblue;
+
+}
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: #3f3f3f;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color:aliceblue;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #3f3f3f;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+    background-color:#d67b03;
+
+}
+/* 导航右边 */
+.navbar-nav>li>.dropdown-menu{
+    
+    background-color: #e79400;
+}
+.navbar-inverse .navbar-nav>.open>a{
+    height: 50px;
+}
+.dropdown-menu>li>a{
+    color: aliceblue;
+}
+
+/* 轮播图 */
+.carousel-inner .item img{
+    min-width: 100%;
+  height: 600px;
+}
+.carousel-indicators li{
+    border-color: black;
+}
+/* 案例 */
+.imgiconolives{
+    width: 80px;
+    height: 80px;
+    
+}
+.promo-item{
+    background-color: #fef8e7;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+/* 展示 */
+.screenshot{
+    margin-top: 30px ;
+    background-color: #cf7b00;
+    box-shadow: 12px 12px 500px #663e01;
+}
+.screenshot .item {
+    border-top: 1px solid #663e01;
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+.screenshot .pleft{
+    width: 400px;
+    height: 300px;
+}
+.screenshot .himg{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.screenshot ul li{
+    margin-top: 20px;
+}
+
+footer{
+    text-align: center;
+    
+    border-top: 1px solid #CCC;
+    background-color: #222;
+    color: blanchedalmond;
+}

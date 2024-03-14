@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/static/assets/css/base.css">
+	<link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/assets/css/login.css">
+	<script src="/static/assets/bootstrap/jquery-3.4.1.min.js"></script>
+	<script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/static/js/login.js"></script>
+</head>
+
+<body>
+	<!-- 导航 -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><img src="/static/assets/images/导航logo.png" alt="Brand">健康管理</a>
+			</div>
+			<ul class="nav navbar-nav ">
+				<li ><a href="/">首页</a></li>
+				<li class="active"><a href="/login">登录</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
+				<!-- <li><a href="#" style="padding: 10px;"><img src="../assets/images/headicon.png" alt="" class="img-circle" ></a></li>
+                <li><a href="#" style="padding-left: 5px;">Daisy</a></li> -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false" style="padding: 10px;"><img src="/static/assets/images/headicon.png" alt=""
+							class="img-circle" style="margin-right: 10px;">
+						<p style="display: inline-block;">Username</p>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/myhome">个人主页</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="/logout">退出登录</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="content">
+		<!-- 登录 -->
+		<div class="form sign-in">
+			<h2>{{ msg }}</h2>
+			<div class="col-md-6 col-md-offset-2">
+				<form method="post" id="loginForm" action="/login">
+                    {% csrf_token %}
+					<div class="form-group input-text">
+						<label class="col-sm-2 control-label" style="width: 100px; margin-top: 15px;font-size: 18px; color: #5490b2;">帐号：</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control required one1" id="userId" name="user_name" placeholder="请输入帐号">
+						</div>
+					  </div>
+					  <div class="form-group input-text">
+						<label for="inputPassword" class="col-sm-2 control-label"  style="width: 100px;margin-top: 15px; font-size: 18px; color: #5490b2;">密码：</label>
+						<div class="col-sm-10">
+						  <input type="password"  name="pwd" id="pwd"class="form-control"  placeholder="请输入密码">
+						</div>
+					</div>
+					<div class="form-group">
+						<input class="btn btn-default" type="submit" value="登录"  style="position: absolute;top: 300px;width: 200px; right: 5px;background-color: #e09400; color: #ffffff;">
+					</div>
+				</form>
+			</div>
+			
+
+		</div>
+		<!-- 切换 -->
+		<div class="sub-cont">
+			<div class="img">
+				<div class="img__text m--up">
+					<h2 class="tishi">还未注册？</h2>
+					<p>立即注册，发现趣味！</p>
+				</div>
+				<div class="img__text m--in">
+					<h2 class="tishi">已有帐号？</h2>
+					<p>有帐号就登录吧，好久不见了！</p>
+				</div>
+				<div class="img__btn">
+					<span class="m--up">注 册</span>
+					<span class="m--in">登 录</span>
+				</div>
+			</div>
+			<!-- 注册 -->
+			<div class="reg_form clearfix">
+				<h2>{{ msg }}</h2>
+				<form id='myform' method="post" action="/register">
+                    {% csrf_token %}
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-3">用户名:</label>
+						<div class="col-sm-10">
+							<input type="text" name="user_name" class="form-control " id="user_name"
+								placeholder="6-20位数字、字母和下划线">
+							<span class="error_tip"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3">密码:</label>
+						<div class="col-sm-10">
+							<input type="password" name="pwd" id="rpwd" class="form-control"
+								placeholder="密码是6到20位字母、数字，还可包含@!#$%^&*-字符">
+							<span class="error_tip"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3">确认密码:</label>
+						<div class="col-sm-10">
+							<input type="password" name="cpwd" id="cpwd" class="form-control"
+								placeholder="密码是6到20位字母、数字，还可包含@!#$%^&*-字符">
+							<span class="error_tip"></span>
+						</div>
+
+					</div>
+					<div class="form-group ">
+						<label class="col-sm-3">邮箱:</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" name="email" id="email">
+							<span class="error_tip"></span>
+						</div>
+
+					</div>
+					<div class="form-group ">
+						<label class="col-sm-3">选择身份：</label>
+						<div class="col-sm-10" style="margin-top: 32px;">
+							<input type="radio" name="u_role" id="inlineRadio1" value="1"> 教师
+							<input type="radio" name="u_role" id="inlineRadio2" value="0"> 学生
+						</div>
+
+					</div>
+					<div class="form-group ">
+						<input class="btn btn-default" type="submit" value="注册" style="width: 100px;float: right;">
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+		</script>
+
+</body>
+
+</html>

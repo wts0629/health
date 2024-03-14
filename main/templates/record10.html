@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>record</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inder:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" />
+    <link rel="stylesheet" href="/static/recordfinal.css" />
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'recordfinal.css' %}">
+
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="bg"><div class="mask-group"></div></div>
+      <div class="header-hero">
+        <div class="navber">
+          <div class="health-tracker">
+            <span class="health">Health</span
+            ><span class="tracker">Tracker</span>
+          </div>
+          <button class="log-out">
+            <span class="log-out-1">Log-out</span>
+            <div class="rectangle"></div>
+          </button>
+          <div class="group">
+            <div class="magnifying-glass">
+              <div class="magnifying-glass-2"></div>
+            </div>
+          </div>
+          <div class="user"><div class="user-3"></div></div>
+          <div class="frame">
+            <span class="home">Home</span><span class="diet">Diet</span
+            ><span class="workout">Workout</span>
+            <span class="sleep">Sleep</span
+            ><span class="setting">Setting </span
+            ><span class="about">About </span>
+          </div>
+          <div class="line"></div>
+          <div class="line-4"></div>
+        </div>
+        <div class="add-record-finish">
+          <div class="add-record">
+            <div class="add-record-5">
+              <span class="add-record-6">+ Add </span
+              ><span class="record">Record</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="background-head">
+        <div class="flex-column-fdc">
+          <div class="add-time-meal">
+            <div class="add-todays">
+              <span class="empty-space"> </span
+              ><span class="empty-space-7"> </span
+              ><span class="empty-space-8">Add </span
+              ><span class="todays-sleep">Today’s</span>
+            </div>
+            <span class="sleep-9"> Sleep</span>
+          </div>
+          <div class="path"></div>
+          <div class="path-a"></div>
+          <div class="rectangle-b">
+            <div class="vector"><div class="path-c"></div></div>
+            <span class="start-time">Start time</span></div>
+
+          <div class="rectangle-d">
+            <div class="vector-e"><div class="alarm-clock"></div></div>
+            <span class="end-time">End time</span>
+          </div>
+        </div>
+        
+        <form method="post" id="loginForm" action="/record">
+        
+          
+          <div class="flex-column-fcd">
+          
+            <div class="input-field-f">
+              <input type="datetime-local" name="strattime">
+            </div>
+
+
+          <div class="input-field-f">
+            <input type="datetime-local" name="endtime">
+          </div>
+  
+          </div>
+        </div>
+        
+        <button class="large">
+          <span class="submit"><a href="/record" class="link-style">submit</a></span>
+          <div class="arrow-right"><div class="arrow-right-12"></div></div>
+        </button>
+
+        </form>
+
+      </div>
+      <div class="footer">
+        <div class="footer-13">
+          <div class="group-14">
+            <div class="group-15">
+              <span class="copyright-text"
+                >Copyright © 2000-2020.logo.com. All rights reserved</span
+              >
+              <div class="flex-row-e">
+                <div class="copyright"><div class="rectangle-16"></div></div>
+                <span class="privacy-policy">Privacy Policy</span
+                ><span class="term-of-use">Term of Use</span
+                ><span class="partner">Partner</span>
+              </div>
+            </div>
+            <div class="footer-17"><div class="rectangle-18"></div></div>
+            <div class="information"><span class="links">Links</span></div>
+            <div class="instagram">
+              <div class="instagram-19">
+                <span class="instagram-gallery">Instagram Gallery</span>
+              </div>
+              <div class="group-1a">
+                <div class="flex-row-d">
+                  <div class="footer-show"></div>
+                  <div class="footer-show-1b"></div>
+                  <div class="footer-show-1c"></div>
+                </div>
+                <div class="flex-row-fbe">
+                  <div class="footer-show-1d"></div>
+                  <div class="footer-show-1e"></div>
+                  <div class="footer-show-1f"></div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-us">
+              <span class="contact-us-20">Contact us</span>
+              <div class="locayion">
+                <span class="glasgow-university">Glasgow University</span>
+                <div class="map-pin"><div class="map-pin-21"></div></div>
+              </div>
+              <div class="call">
+                <span class="xxx-xxxxx">xxx-xxxxx</span>
+                <div class="phone"><div class="phone-22"></div></div>
+              </div>
+              <div class="mail">
+                <span class="xxx-student-gla-ac-uk">xxx@student.gla.ac.uk</span>
+                <div class="envelope-simple-open">
+                  <div class="envelope-simple-open-23"></div>
+                </div>
+              </div>
+              <div class="watch">
+                <span class="sun-sat-time">Sun - Sat / 10:00 AM - 8:00 PM</span>
+                <div class="clock"><div class="clock-24"></div></div>
+              </div>
+            </div>
+            <div class="links-25">
+              <span class="about-us">About us</span
+              ><span class="contact-us-26">Contact Us</span
+              ><span class="your-plan">Your Plan</span
+              ><span class="team">Team</span>
+            </div>
+            <span class="send-message">Send message to us</span>
+            <div class="box">
+              <div class="rectangle-27"></div>
+              <div class="rectangle-28"></div>
+              <span class="enter-email">Enter Your Email</span>
+              <div class="send-button">
+                <div class="carbon-send-alt-filled">
+                  <div class="vector-29"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social-icon">
+          <div class="image"></div>
+          <div class="image-2a"></div>
+          <div class="image-2b"></div>
+          <div class="image-2c"></div>
+          <div class="image-2d"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Generated by Codia AI - https://codia.ai/ -->
+  </body>
+</html>
